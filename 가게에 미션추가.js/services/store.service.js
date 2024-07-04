@@ -7,6 +7,6 @@ export const addMissionToStore = async (storeId, missionDTO) => {
     const mission = await addMissionToStoreDAO(storeId, missionDTO);
     return mission;
   } catch (error) {
-    throw new BaseError(status.INTERNAL_SERVER_ERROR, "Failed to add mission to store");
+    throw new BaseError(status.INTERNAL_SERVER_ERROR, "미션 추가 실패");
   }
 };
